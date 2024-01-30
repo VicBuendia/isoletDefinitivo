@@ -34,7 +34,7 @@ export default function Home() {
   },[])
   console.log(authModel)
   return (
-    <div className=' bg-gradient-to-b from-zinc-800 to-[#D6C59B] '>
+    <div className=' mt-1  bg-[#f7f6f2] '>
       {/*domLoaded && 
         <>
           <h1>jfsjf</h1>
@@ -45,7 +45,7 @@ export default function Home() {
 
       {domLoaded &&
           <div className=' flex flex-col gap-5 '>
-            <div className=' flex gap-40  p-7   text-white'>
+            <div className=' flex gap-40  p-7   '>
               <div className=' lg:ml-12 lg:mt-10'>
                 <h1 className='text-4xl font-bold mb-1'>Hola, {authModel?.name}</h1>
                 <h2 className='text-xl font-light'>Las citas de hoy son</h2>

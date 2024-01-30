@@ -17,7 +17,7 @@ export default function CitaCard(props) {
   const after = citaDate.getTime() < new Date().getTime()
 
   return ( 
-    <Link href= {`/citas/${props.id}`} className='flex flex-col shadow-md p-4 rounded-xl hover:bg-[#D6C59B] border hover:border-zinc-600 bg-zinc-100 transition-all'>
+    <Link href= {`/citas/${props.id}`} className='flex flex-col shadow-md p-4 rounded-xl hover:bg-[#D6C59B] bg-zinc-100 transition-all'>
       <div className='flex flex-col gap-10 '>
         <div>
           <p className='font-bold text-lg'>{props.cliente.nombre} {props.cliente.apellido_p} {props.cliente.apellido_m}</p>

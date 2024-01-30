@@ -1,6 +1,7 @@
 import { Inter, Manrope } from 'next/font/google'
 import './globals.css'
 import BarraNav from '@/components/BarraNav'
+import clsx from 'clsx'
 
 const inter = Inter({ subsets: ['latin'] })
 const man = Manrope({subsets:['latin']})
@@ -13,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={man.className} >
+      <body className={clsx(man.className," bg-[#f7f6f2]")} >
         <BarraNav></BarraNav>
         {children}
         </body>

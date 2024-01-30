@@ -65,28 +65,28 @@ export default function ClientePage({params}){
   return(
     <main className='p-20 flex flex-col justify-center items-center'>
         <section className="flex gap-5 flex-col">
-            <div className="p-5">
-            <div className="flex justify-between">
-                <h1 className="mb-5">Actualizar servicio</h1>
-                <button onClick={handleDelete} className="text-4xl text-red-500"><MdDelete></MdDelete></button>
+            
+            <div className="flex justify-between gap-10 mb-5">
+                <p className="text-3xl font-bold">Editar servicio</p>
+                <button onClick={handleDelete} className="text-4xl hover:text-red-500"><MdDelete></MdDelete></button>
 
             </div>
             <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
                 <div className="flex flex-col">
                     <label className="font-bold" htmlFor="">Nombre:</label>
-                    <input type="text" name="nombre" value={formData.nombre} onChange={handleInputChange}
-                    className="border rounded-xl p-3" />
+                    <input type="text" required name="nombre" value={formData.nombre} onChange={handleInputChange}
+                    className="border rounded-xl p-3 shadow" />
                 </div>
 
                 <div className="flex flex-col">
                     <label className="font-bold" htmlFor="">Costo:</label>
-                    <input type="text" name="costo" value={formData.costo} onChange={handleInputChange}
-                    className="border rounded-xl p-3" />
+                    <input type="text" required name="costo" value={formData.costo} onChange={handleInputChange}
+                    className="border rounded-xl p-3 shadow" />
                 </div>
 
-                <button type="submit" className="bg-zinc-800 p-3 rounded-xl text-white">Actualizar</button>
+                <button type="submit" className="mt-5 border w-full shadow rounded-xl p-2 bg-gradient-to-b from-zinc-800 via-zinc-800 to-zinc-700 text-white hover:bg-gradient-to-br py">Guardar</button>
             </form>
-        </div>
+        
         </section>
   </main>
 

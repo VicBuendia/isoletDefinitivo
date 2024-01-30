@@ -31,24 +31,24 @@ export default function crear(){
     }
 
     return(
-        <main className="p-20 flex flex-col justify-center items-center bg-zinc-100 ">
+        <main className="p-20 flex flex-col justify-center items-center mt-1 bg-[#f7f6f2]">
 
-            <h1 className="text-2xl font-light mb-7">Nuevo servicio</h1>
+            <h1 className="text-3xl font-bold mb-7">Nuevo servicio</h1>
 
             <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
                 <div className="flex flex-col">
                 <label className="font-bold">Nombre:</label>
-                    <input type="text" name="nombre" value={formData.nombre} onChange={handleInputChange}
-                     className="border rounded-xl p-3" />
+                    <input type="text" required name="nombre" value={formData.nombre} onChange={handleInputChange}
+                     className="border rounded-xl p-3 shadow" />
                 </div>
 
                 <div className="flex flex-col">
                 <label className="font-bold">Costo:</label>
-                    <input type="text" name="costo" value={formData.costo} onChange={handleInputChange}
-                     className="border rounded-xl p-3" />
+                    <input type="text" required name="costo" value={formData.costo} onChange={handleInputChange}
+                     className="border rounded-xl p-3 shadow"/>
                 </div>
 
-                <button type="submit" className=" border w-full rounded-xl p-2 bg-zinc-800 text-white">Crear</button>
+                <button type="submit" className=" border w-full shadow rounded-xl p-2 bg-gradient-to-b from-zinc-800 via-zinc-800 to-zinc-700 text-white hover:bg-gradient-to-br py">Crear</button>
             </form>
         </main>
 

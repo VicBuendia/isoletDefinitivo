@@ -147,16 +147,16 @@ export default function CitaPage({params}){
     }
 
     return(
-    <main className='p-20 flex justify-center items-center bg-zinc-100 '>
+    <main className='p-20 flex justify-center items-center mt-1 bg-[#f7f6f2] '>
         <article className="flex flex-col justify-between">
             <section className="flex flex-col">
-                <h1 className="text-2xl font-light mb-7">Nueva cita</h1>
+                <h1 className="text-3xl font-bold mb-7">Nueva cita</h1>
                 <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
                     <div className="flex flex-col gap-2">
                         <label className="font-bold">Nombre:</label>
                         {cita?.expand.cliente?.nombre} {cita?.expand.cliente?.apellido_p} {cita?.expand.cliente?.apellido_m}
 
-                        <select defaultValue={'DEFAULT'} onChange={handleSelectChangeCliente} className="border p-3 rounded-xl">
+                        <select required defaultValue={'DEFAULT'} onChange={handleSelectChangeCliente} className="border p-3 rounded-xl shadow">
                             <option className="text-zinc-500" value="DEFAULT" disabled>Seleccione un cliente ...</option>
                             {clientes.map((cli)=> (
                                 <option key={cli.id} value={cli.id} data-info={cli.nombre}>{cli.nombre} {cli.apellido_p} {cli.apellido_m}</option>
@@ -166,24 +166,24 @@ export default function CitaPage({params}){
                     </div>
                     <div className="flex flex-col gap-2">
                         <label className="font-bold">Fecha:</label>
-                        <input type="date" name="fecha" value={formData.fecha.substring(0,10)} onChange={handleInputChange}
-                        className="border rounded-xl p-3" />
+                        <input type="date" required name="fecha" value={formData.fecha.substring(0,10)} onChange={handleInputChange}
+                        className="border rounded-xl p-3 shadow" />
                     </div>
                     <div className="flex flex-col gap-2">
                         <label className="font-bold">Hora Inicio:</label>
-                        <input type="time"  name="hora_i" value={formData.hora_i} onChange={handleInputChange}
-                        className="border rounded-xl p-3" />
+                        <input type="time"  required name="hora_i" value={formData.hora_i} onChange={handleInputChange}
+                        className="border rounded-xl p-3 shadow" />
                     </div>
                     <div className="flex flex-col gap-2">
                         <label className="font-bold">Hora Fin:</label>
-                        <input type="time"  name="hora_f" value={formData.hora_f} onChange={handleInputChange}
-                        className="border rounded-xl p-3" />
+                        <input type="time"  required name="hora_f" value={formData.hora_f} onChange={handleInputChange}
+                        className="border rounded-xl p-3 shadow" />
                     </div>
                 </form>
                 <div>
                     <div className="flex flex-col gap-5 mt-5">
                         {nuevosServicios?.map((item) => (
-                            <div className="flex justify-between p-3 border rounded-xl">
+                            <div className="flex justify-between p-3 border rounded-xl shadow bg-zinc-100">
                                 <p>{item.nombre}</p>
                                 <button className="font-bold text-red-500"
                                 onClick={()=>borrarLista(item.nombre)}>Eliminar </button>
@@ -192,16 +192,16 @@ export default function CitaPage({params}){
                         ))}
                     </div>
                     <div className="flex gap-5 mt-9">
-                        <select defaultValue={'DEFAULT'} onChange={handleSelectChange} className="border p-3 rounded-xl">
+                        <select required defaultValue={'DEFAULT'} onChange={handleSelectChange} className="border p-3 rounded-xl shadow">
                             <option className="text-zinc-500" value="DEFAULT" disabled>Seleccione un servicio ...</option>
                             {servicios.map((serv)=> (
                                 <option key={serv.id} value={serv.id} data-info={serv.nombre}>{serv.nombre}</option>
                             ))}
                         </select>
-                        <button onClick={actualizarLista} className="bg-zinc-800 p-3 rounded-xl text-white">Añadir</button>
+                        <button onClick={actualizarLista} className="bg-zinc-800 p-3 rounded-xl text-white shadow">Añadir</button>
                     </div>
                     
-                    <button onClick={handleSubmit} className="mt-5 border w-full rounded-xl p-2 bg-zinc-800 text-white">Crear Cita</button>
+                    <button onClick={handleSubmit} className="mt-5 border w-full shadow rounded-xl p-2 bg-gradient-to-b from-zinc-800 via-zinc-800 to-zinc-700 text-white hover:bg-gradient-to-br py">Crear Cita</button>
                 </div>
             </section>
         </article>

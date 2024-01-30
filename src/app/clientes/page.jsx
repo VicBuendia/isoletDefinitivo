@@ -50,8 +50,8 @@ export default function ClientesPage() {
         </Link>
       </div>
       <div className="w-full flex   mb-6  lg:w-1/2 lg:mx-80">
-          <input type="text" name="busqueda" className="border-l border-t border-b border-zinc-200 rounded-l-3xl py-2 px-5 w-full placeholder:italic shadow-lg" placeholder= 'Buscar por nombre o teléfono' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
-          <button className='p-3 bg-zinc-800  rounded-r-3xl text-white  hover:bg-gradient-to-b from-zinc-900 hover:to-zinc-700  shadow-lg border-r border-t border-b border-zinc-200 border-l' onClick={buscarClientes} >Buscar</button>
+          <input type="text" name="busqueda" className="border-l border-t border-b border-zinc-200 rounded-l-3xl py-2 px-5 w-full placeholder:italic shadow-md" placeholder= 'Buscar por nombre o teléfono' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
+          <button className='p-3 bg-zinc-800  rounded-r-3xl text-white  hover:bg-gradient-to-b from-zinc-900 hover:to-zinc-700  shadow-md border-r border-t border-b border-zinc-200 border-l' onClick={buscarClientes} >Buscar</button>
       </div>
       {isLoaded && (
         <div className='grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-10 lg:mx-12'>

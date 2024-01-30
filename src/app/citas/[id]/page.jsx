@@ -151,26 +151,26 @@ export default function CitaPage({params}){
     <main className='p-20 flex flex-col justify-center items-center'>
         <section className="flex gap-5 flex-col">
             <div className="flex gap-20">
-                <h1 className="text-2xl">{cita?.expand.cliente?.nombre} {cita?.expand.cliente?.apellido_p} {cita?.expand.cliente?.apellido_m}</h1>
-                <button onClick={handleDelete} className="text-4xl text-red-500"><MdDelete></MdDelete></button>
+                <h1 className="text-2xl font-bold">{cita?.expand.cliente?.nombre} {cita?.expand.cliente?.apellido_p} {cita?.expand.cliente?.apellido_m}</h1>
+                <button onClick={handleDelete} className="text-4xl hover:text-red-500"><MdDelete></MdDelete></button>
             </div>
             <div className="flex flex-col">
-                <h1 className="mb-5">Actualizar cita</h1>
+                <h1 className="mb-5">Editar cita</h1>
                 <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
                     <div className="flex flex-col gap-2">
                         <label className="font-bold">Fecha:</label>
-                        <input type="date" name="fecha" value={formData.fecha.substring(0,10)} onChange={handleInputChange}
-                        className="border rounded-xl p-3" />
+                        <input type="date" required name="fecha" value={formData.fecha.substring(0,10)} onChange={handleInputChange}
+                        className="border rounded-xl p-3 shadow" />
                     </div>
                     <div className="flex flex-col gap-2">
                         <label className="font-bold">Hora Inicio:</label>
-                        <input type="time" name="hora_i" value={formData.hora_i} onChange={handleInputChange}
-                        className="border rounded-xl p-3" />
+                        <input type="time" required name="hora_i" value={formData.hora_i} onChange={handleInputChange}
+                        className="border rounded-xl p-3 shadow " />
                     </div>
                     <div className="flex flex-col gap-2">
                         <label className="font-bold">Hora Fin:</label>
-                        <input type="time" name="hora_f" value={formData.hora_f} onChange={handleInputChange}
-                        className="border rounded-xl p-3" />
+                        <input type="time" required name="hora_f" value={formData.hora_f} onChange={handleInputChange}
+                        className="border rounded-xl p-3 shadow" />
                     </div>
                     {//<button type="submit" className="border rounded-xl p-2 bg-zinc-800 text-white">Actualizar Hora</button>
                     }       
@@ -180,7 +180,7 @@ export default function CitaPage({params}){
                         <p className="font-bold mb-3">Servicios:</p>
                         <div className="flex flex-col gap-3">
                             {cita?.expand.servicios?.map((servicio)=>(
-                                <div key={servicio.id} className="flex justify-between border p-3 rounded-xl">
+                                <div key={servicio.id} className="flex justify-between border p-3 rounded-xl shadow bg-zinc-100">
                                     <p>{servicio.nombre}</p>
                                     <button onClick={() => eliminarServicio(servicio.id)}
                                     className="font-bold text-red-500">Eliminar</button>
@@ -192,7 +192,7 @@ export default function CitaPage({params}){
                         {//<p className="mt-5 font-bold">Servcios a añadir:</p>
                         }
                         {nuevosServicios?.map((item) => (
-                            <div className="flex justify-between p-3 border rounded-xl">
+                            <div className="flex justify-between p-3 border rounded-xl ">
                                 <p>{item.nombre}</p>
                                 <button className="font-bold text-red-500"
                                 onClick={()=>borrarLista(item.nombre)}>Eliminar </button>
@@ -201,7 +201,7 @@ export default function CitaPage({params}){
                         ))}
                     </div>
                     <div className="flex gap-5 mt-9">
-                        <select defaultValue={'DEFAULT'} onChange={handleSelectChange} className="border p-3 rounded-xl">
+                        <select required defaultValue={'DEFAULT'} onChange={handleSelectChange} className="border p-3 rounded-xl shadow">
                             <option className="text-zinc-500" value="DEFAULT" disabled>Seleccione un servicio ...</option>
                             {servicios.map((serv)=> (
                                 <option key={serv.id} value={serv.id} data-info={serv.nombre}>{serv.nombre}</option>
@@ -209,7 +209,7 @@ export default function CitaPage({params}){
                         </select>
                         <button onClick={actualizarLista} className="bg-zinc-800 p-3 rounded-xl text-white">Añadir</button>
                     </div>
-                    <button onClick={AgregarServicios} className="mt-5 border w-full rounded-xl p-2 bg-zinc-800 text-white">Actualizar Servicios</button>
+                    <button onClick={AgregarServicios} className="mt-5 border w-full shadow rounded-xl p-2 bg-gradient-to-b from-zinc-800 via-zinc-800 to-zinc-700 text-white hover:bg-gradient-to-br py">Guardar</button>
                 </div>
             </div>
         </section>
