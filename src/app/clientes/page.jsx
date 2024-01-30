@@ -46,7 +46,7 @@ export default function ClientesPage() {
       <div className='flex justify-between mb-7 lg:ml-12 lg:mt-10'>
         <h1 className='text-4xl font-bold'>Clientes</h1>
         <Link  href ="/clientes/crear" className='font-bold text-4xl'>{/*border shadow  fixed bottom-12 right-8 */}
-          <IoAdd className=' bg-zinc-100 border shadow-md shadow-zinc-700 rounded-full size-14  hover:bg-gradient-to-b from-zinc-900 hover:to-zinc-700 hover:shadow-md hover:border-zinc-700 hover:shadow-zinc-700 hover:text-zinc-200 hover:size-16 active:bg-zinc-900 active:text-zinc-100 fixed bottom-12 right-10  ' />{/*<IoAddCircleOutline/>*/}
+          <IoAdd className=' bg-zinc-100 border shadow-sm shadow-zinc-500 rounded-full size-14  hover:bg-gradient-to-b from-zinc-900 hover:to-zinc-700 hover:shadow-md hover:border-zinc-700 hover:shadow-zinc-700 hover:text-zinc-200 hover:size-16 active:bg-zinc-900 active:text-zinc-100 fixed bottom-12 right-10  ' />{/*<IoAddCircleOutline/>*/}
         </Link>
       </div>
       <div className="w-full flex   mb-6  lg:w-1/2 lg:mx-80">

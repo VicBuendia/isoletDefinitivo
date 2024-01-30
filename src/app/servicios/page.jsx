@@ -37,7 +37,7 @@ export default function ServiciosPage() {
       <div className='flex justify-between mb-7 lg:mx-12 lg:mt-10'>
         <h1 className='text-4xl font-bold'>Servicios</h1>
         <Link href ="/servicios/crear"className='font-bold text-4xl'>
-          <IoAdd className=' bg-zinc-100 border shadow-md shadow-zinc-700 rounded-full size-14  hover:bg-gradient-to-b from-zinc-900 hover:to-zinc-700 hover:shadow-md hover:border-zinc-700 hover:shadow-zinc-700 hover:text-zinc-200 hover:size-16 active:bg-zinc-900 active:text-zinc-100 fixed bottom-12 right-10  ' />
+          <IoAdd className=' bg-zinc-100 border shadow-sm shadow-zinc-500 rounded-full size-14  hover:bg-gradient-to-b from-zinc-900 hover:to-zinc-700 hover:shadow-md hover:border-zinc-700 hover:shadow-zinc-700 hover:text-zinc-200 hover:size-16 active:bg-zinc-900 active:text-zinc-100 fixed bottom-12 right-10  ' />
         </Link>
       </div>
       <div className="w-full flex mb-6 lg:w-1/2 lg:mx-80 ">
