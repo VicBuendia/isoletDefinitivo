@@ -12,7 +12,7 @@ export default function CitaCard(props) {
   const citaDate = new Date(`${subFecha.slice(0,10)}T${props.hora_i}`)
   const citaDate_f = new Date(`${subFecha.slice(0,10)}T${props.hora_f}`)
 
-  const during = new Date().getTime() >= citaDate.getTime() && new Date().getTime() <= citaDate_f.getTime()
+  const during  = new Date().getTime() >= citaDate.getTime() && new Date().getTime() <= citaDate_f.getTime()
   const before = citaDate.getTime() > new Date().getTime()
   const after = citaDate.getTime() < new Date().getTime()
 

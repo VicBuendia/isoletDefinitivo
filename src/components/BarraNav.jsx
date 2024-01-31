@@ -50,7 +50,7 @@ export default function BarraNav() {
             <img src="/isolet.png" alt="" />
           </Link>
           </div>
-          <Link className='text-2xl hover:text-[#D6C59B]' href ="/">ISOLET SALON</Link>
+          <Link className='text-2xl hover:text-[#D6C59B]' href ="/">ISOLET SALÓN</Link>
         </div>
         <div className='lg:flex lg:items-center gap-7 hidden mr-28'>
           <Link className='flex gap-2 items-center p-3 hover:bg-white hover:text-zinc-800 transition ease-out rounded-xl ' href ="/clientes"><FaPerson className='text-2xl'></FaPerson>Clientes</Link>
