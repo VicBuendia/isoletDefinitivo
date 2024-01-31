@@ -30,6 +30,7 @@ export default function ClientesPage() {
     console.log(clientesResultado)
     setClientes(clientesResultado)
   }
+ 
 
   const handleChange = (e) => {
     console.log(e.target.value)

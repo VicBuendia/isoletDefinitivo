@@ -100,7 +100,7 @@ export default function BarraNav() {
               </div>
               <button onClick={handleLogout} className='bg-red-500/70 hover:bg-red-500 text-white transition ease-out rounded-xl w-full p-5 flex gap-2 justify-center items-center'>
                 <IoLogOut className='text-2xl'></IoLogOut>
-                Logout
+                Cerrar sesión
               </button>
             </article>
           </div>
